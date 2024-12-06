@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "DOM manipulation",
+  "version": "1.0",
+  "description": "A simple Chrome extension with DOM manipulation",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": [
+        "http://localhost:3003/*",
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://developer.chrome.com/docs/webstore/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
